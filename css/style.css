@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700;800&display=swap');
+body {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #4D5053;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+:root {
+    --ash: #EDEEE9;
+    --green: #2A524C;
+    --white: #fff;
+    --black: #000;
+    --yellow: #F2C94C;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    width: 66px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 19px;
+    border-left: 1px solid var(--ash);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn_primary {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn_primary:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--yellow);
+    left: -10px;
+    top:-10px;
+    transition: 0.3s all ease-in-out;
+    z-index: -1;
+}
+
+.btn_primary:hover:before {
+    background: var(--yellow);
+}
+
+.header__nav {
+    display: none;
+}
+
+.btn_revert{
+    transform: rotate(-90deg);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.social__item {
+    width: 38px;
+    height: 38px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    background-position: center;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.social__item:hover {
+    background-color: var(--yellow);
+}
+
+.fb {
+    background-image: url("../images/facebook.png");
+}
+
+.in {
+    background-image: url("../images/inst.png");
+}
+
+.bn {
+    background-image: url("../images/behance.png");
+}
+
+.logo {
+    width: 110px;
+    height: 36px;
+    margin-top: 47px;
+}
+
+.main {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main__btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__title {
+    font-size: 140px;
+    color: var(--green);
+    line-height: 150px;
+    white-space: nowrap;
+}
+
+.main__title > span {
+    margin-left: 200px;
+}
+
+.text_yellow {
+    color: var(--yellow);
+}
+
+.btn_yellow {
+    font-size: 16px;
+    background: var(--yellow);
+    color: var(--white);
+    padding: 14px 34px;
+    border-radius: 59px;
+    transition: 0.5s ease-in-out;
+}
+.btn_yellow:hover {
+    background-color: var(--green);
+}
